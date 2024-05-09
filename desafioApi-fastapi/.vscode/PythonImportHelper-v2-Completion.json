@@ -1,0 +1,182 @@
+[
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Float",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "PositiveFloat",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "AtletaModel",
+        "kind": 6,
+        "importPath": "atleta.models",
+        "description": "atleta.models",
+        "peekOfCode": "class AtletaModel(BaseModel):\n  __tablename__ = \"atletas\"\n  pk_id: Mapped[int] = mapped_column(Integer, primary_key=True)\n  nome: Mapped[str] = mapped_column(String(50), nullable=False)\n  cpf: Mapped[str] = mapped_column(String(11), nullable=False)\n  idade: Mapped[str] = mapped_column(Integer(11), nullable=False)\n  peso: Mapped[Float] = mapped_column(Float(11), nullable=False)\n  altura: Mapped[Float] = mapped_column(Float(11), nullable=False)\n  sexo: Mapped[str] = mapped_column(String(1), nullable=False)\n  created_as: Mapped[DateTime] = mapped_column(DateTime, nullable=False)",
+        "detail": "atleta.models",
+        "documentation": {}
+    },
+    {
+        "label": "Atleta",
+        "kind": 6,
+        "importPath": "atleta.schemas",
+        "description": "atleta.schemas",
+        "peekOfCode": "class Atleta(BaseModel):\n  nome: Annotated[str, field(description=\"nome do atleta\", examples=\"joao\", max_length=\"50\")]\n  cpf: Annotated[str, field(description=\"cpf do atleta\", examples=\"12345678901\", max_length=\"11\")]\n  idade: Annotated[int, field(description=\"idade do atleta\", examples=\"25\")]\n  peso: Annotated[PositiveFloat, field(description=\"peso do atleta\", examples=\"50.6\")]\n  altura: Annotated[PositiveFloat, field(description=\"altura do atleta\", examples=\"1.80\")]\n  sexo: Annotated[str, field(description=\"sexo do atleta\", examples=\"M or F\")]",
+        "detail": "atleta.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "contrib.models",
+        "description": "contrib.models",
+        "peekOfCode": "class BaseModel(DeclarativeBase):\n  id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True),default=uuid4,nullable=False)",
+        "detail": "contrib.models",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(title=\"workout api\")\nif __name__==\"__main__\":\n  import uvicorn\n  uvicorn.run(\"main:app\", host=\"0.0.0.0\", port=8000, log_level='info', reload=True)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
