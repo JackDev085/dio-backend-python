@@ -22,3 +22,7 @@ Durante o bootcamp, serão exploradas várias tecnologias e frameworks. Algumas 
 - **FastAPI**: Framework moderno e eficiente para a construção de APIs rápidas em Python.
 - **Flask**: Microframework leve para o desenvolvimento de aplicações web em Python.
 - **Django**: Framework web completo para o desenvolvimento rápido e escalável de aplicações web em Python.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f8414a4b521f3fe4f4ea0f38b12837e896096bd
